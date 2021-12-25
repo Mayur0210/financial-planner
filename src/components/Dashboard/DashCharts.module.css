@@ -1,0 +1,12 @@
+.investmentSplit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.investmentSplit label{
+    align-items: center;
+    text-align: center;
+
+}
