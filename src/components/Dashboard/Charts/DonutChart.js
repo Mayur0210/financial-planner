@@ -26,24 +26,24 @@ const DonutChart = (props) => {
     } = props;
     const sin = Math.sin(-RADIAN * midAngle);
     const cos = Math.cos(-RADIAN * midAngle);
-    const sx = cx + (outerRadius + 10) * cos;
-    const sy = cy + (outerRadius + 10) * sin;
-    const mx = cx + (outerRadius + 30) * cos;
-    const my = cy + (outerRadius + 30) * sin;
+    const sx = cx + (outerRadius ) * cos;
+    const sy = cy + (outerRadius ) * sin;
+    const mx = cx + (outerRadius ) * cos;
+    const my = cy + (outerRadius ) * sin;
     const ex = mx + (cos >= 0 ? 1 : -1) * 22;
     const ey = my;
     const textAnchor = cos >= 0 ? "start" : "end";
 
     return (
       <g>
-        <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+        <text x={cx} y={cy} dy={4} textAnchor="middle" fill={fill}>
           {payload.name}
         </text>
         <Sector
           cx={cx}
           cy={cy}
-          innerRadius={innerRadius}
-          outerRadius={outerRadius}
+          innerRadius={innerRadius +1}
+          outerRadius={outerRadius +2}
           startAngle={startAngle}
           endAngle={endAngle}
           fill={fill}
@@ -64,13 +64,13 @@ const DonutChart = (props) => {
         />
         <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
         <text
-          x={ex + (cos >= 0 ? 1 : -1) * 12}
+          x={ex + (cos >= 0 ? 1 : -1) * 3}
           y={ey}
           textAnchor={textAnchor}
           fill="#333"
         >{`PV ₹${value.toLocaleString()}`}</text>
         <text
-          x={ex + (cos >= 0 ? 1 : -1) * 12}
+          x={ex + (cos >= 0 ? 1 : -1) * 6}
           y={ey}
           dy={18}
           textAnchor={textAnchor}
@@ -90,17 +90,17 @@ const DonutChart = (props) => {
   };
 
   return (
-    <PieChart width={800} height={400} onMouseEnter={onPieEnter}>
+    <PieChart width={400} height={400} onMouseEnter={onPieEnter}>
       <Pie
       activeIndex={indexState.activeIndex}
       activeShape={renderActiveShape}
         data={props.data}
         cx={200}
         cy={200}
-        innerRadius={60}
-        outerRadius={120}
+        innerRadius={100}
+        outerRadius={160}
         fill="#8884d8"
-        paddingAngle={2}
+        paddingAngle={1}
         dataKey="value"
         onMouseEnter={onPieEnter}
       >

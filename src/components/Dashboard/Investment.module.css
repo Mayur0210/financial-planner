@@ -1,0 +1,38 @@
+.folio{
+    font-size: small;
+    color: gray;
+    font-family: sans-serif;
+    
+}
+
+.foliolabels {
+align-items: center;
+font-family: sans-serif;
+font-size: small;
+position: inherit;
+color: rgb(63, 61, 61);
+padding-top: 1rem;
+text-align: center;
+}
+
+.foliovalues {
+    align-items: center;
+    font-family: sans-serif;
+    font-size: medium;
+    position: inherit;
+    color: rgb(63, 61, 61);
+    text-align: center;
+    }
+
+
+.trxClass{
+    border-top-style: dotted;
+    border-top-width: 1px;
+    border-top-color: lawngreen;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: small;
+    position: inherit;
+    color: rgb(63, 61, 61);
+    text-align: center;
+}

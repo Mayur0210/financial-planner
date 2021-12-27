@@ -1,6 +1,7 @@
 import classes from "./DashCharts.module.css"
 import DonutChart from "./Charts/DonutChart";
-
+import Investments from "./Investments";
+import Card from "../UI/Card"
 const pv_data = [
   { name: "Equity", value: 100000 },
   { name: "Debt", value: 30000 },
@@ -17,18 +18,23 @@ const principal_data = [
 
 const DashCharts = () => {
   return (
-    <div >
+    <div>
       <h2>Your Portfolio Split</h2>
+    <Card >
       <div className={classes.investmentSplit}>
       <div>
-        <h3>Invested Amount</h3>
+        <h4>Invested Amount</h4>
+        <h3>₹{(5000000).toLocaleString()}</h3>
         <DonutChart data={principal_data} />
       </div>
       <div>
-        <h3>Invested Amount</h3>
+        <h4>Present Value</h4>
+        <h3>₹{(5050000).toLocaleString()}</h3>
         <DonutChart data={pv_data} />
       </div>
       </div>
+    </Card>
+    <Investments/>
     </div>
   );
 };

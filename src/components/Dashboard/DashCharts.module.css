@@ -1,12 +1,22 @@
 .investmentSplit {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-flow: row;
+    
+
     
 }
 
-.investmentSplit label{
+.investmentSplit h3{
     align-items: center;
     text-align: center;
+    color:rgb(104, 101, 101)
+
+}
+
+.investmentSplit h4{
+    align-items: center;
+    text-align: center;
+    color: rgb(95, 95, 95);
 
 }
